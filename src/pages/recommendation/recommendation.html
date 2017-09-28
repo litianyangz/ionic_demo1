@@ -1,0 +1,40 @@
+<!--惠民推荐-->
+<ion-content style="background:#eee;">
+    <div class="recommendation-top">
+        <button class="open-menu" menuToggle></button>
+        <ion-slides pager #myslider autoplay="1500" loop="true" (ionSlideAutoplayStop)="change()">
+            <ion-slide *ngFor="let slide of slides">
+                <a [href]="slide.href"><img [src]="slide.image" class="slide-image" /></a>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="recommendation-center" style="background:white;">
+        <ul class="r-c-ul">
+            <li *ngFor="let tui of tui_icon" class="r-c-ul-li">
+                <a [href]="tui.a" class="r-c-ul-a">
+                    <div class="r-c-ul-box">
+                        <img [src]="tui.img" alt="" class="r-c-ul-img">
+                    </div>
+                    <span>{{tui.title}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="recommendation-footer">
+        <ion-slides pager>
+            <ion-slide *ngFor="let rate of rates">
+                <a [href]="rate.href">
+                    <span class="r-f-span">{{rate.span}}</span>
+                    <img [src]="rate.img" class="rate-image" />
+                    <div *ngFor='let span of rate.tab'>
+                        <img [src]="span.img" alt="">
+                        <span>{{span.title}}</span>
+                        <div *ngFor='let sp of span.tc'>
+                            <a [href]="sp.title"></a>
+                        </div>
+                    </div>
+                </a>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>

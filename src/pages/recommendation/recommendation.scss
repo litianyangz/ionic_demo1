@@ -1,0 +1,86 @@
+page-recommendation {
+    .recommendation-top {
+        .slide-zoom {
+            height: 100%;
+        }
+        position: relative;
+        .open-menu {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background-image: url(../../assets/login-img/ind_icon_woh.png);
+            background-position: center center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        width: 100%;
+        height: 30%;
+        .slide-image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .recommendation-center {
+        height: 13%;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        .r-c-ul {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            .r-c-ul-li {
+                width: 25%;
+                height: 100%;
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                .r-c-ul-a {
+                    width: 100%;
+                    height: 100%;
+                    .r-c-ul-box {
+                        width: 25%;
+                        margin: 10px auto 0px auto;
+                    }
+                    span {
+                        width: 100%;
+                        font-size: 8px;
+                        text-align: center;
+                        color: black;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .recommendation-footer {
+        width: 100%;
+        height: 52%;
+        .slide-zoom {
+            height: 100%;
+        }
+        .rate-image {
+            height: 100%;
+            width: 100%;
+        }
+        .r-f-span {
+            display: inline-block;
+            position: absolute;
+            top: 3%;
+            left: 1%;
+            color: black;
+            font-size: 10px;
+        }
+    }
+}

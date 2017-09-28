@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+    <ion-content class="c-bgc">
+        <div class="content-top">
+            <button class="user-header-icon" style="background:#5b5b5b;" (click)="goLogin()">
+               <img src="../assets/icon/ind_icon_toux.png"/>
+            </button>
+            <div class="content-top-btn c-bgc">
+                <button ion-button outline small class=" login-btn c" (click)="goLogin()">立即登录</button>
+                <button ion-button outline small class="register-btn c" (click)="register()">注册领红包</button>
+            </div>
+        </div>
+        <div class="content-center ">
+            <ion-list class="c-bgc ">
+                <li ion-item *ngFor="let p of pages " (click)="openPage(p) " class="c-bgc">
+                    {{p.title}}
+                </li>
+            </ion-list>
+        </div>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage " #content swipeBackEnabled="false "></ion-nav>

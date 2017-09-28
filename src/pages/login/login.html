@@ -1,0 +1,33 @@
+<!--登录页-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>登录</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="login-logo"></div>
+    <div class="form">
+        <ion-item style="width: 100%;">
+            <ion-label floating>用户名</ion-label>
+            <ion-input type="text" [(ngModel)]="data.username" clearOnEdit="true"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>密码</ion-label>
+            <ion-input type="password" [(ngModel)]="data.password"></ion-input>
+        </ion-item>
+    </div>
+    <div class="findpassword">
+        <button class="f-pwd-btn" (click)="findpassword()">忘记密码?</button>
+    </div>
+    <div class="login">
+        <button ion-button class="login-ionc" (click)="login()">登录</button>
+    </div>
+    <div class="register">
+        <button class="register-btn" (click)="register()">还不是会员，立即注册</button>
+    </div>
+    <div class="mak-call">
+        <button class="mak-call-btn" (click)="makCallbtn()"></button>
+        <span>工作日：09：00-17:30</span>
+    </div>
+</ion-content>
